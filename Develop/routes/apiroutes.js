@@ -1,10 +1,8 @@
-const app = require('express').Router();
+// const app = require('express').Router();
 const db = require('../db/db.json');
 const fs = require('fs');
 // const { json } = require('express');
-
 module.exports = (app) => {
-
 app.get("/notes", (req, res) => {
     let db = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));
     res.json(db);
@@ -26,5 +24,11 @@ app.post("/notes", (req, res) => {
     })
     res.json(db);
 })
-
 }
+
+
+
+
+
+
+// module.exports = app;
