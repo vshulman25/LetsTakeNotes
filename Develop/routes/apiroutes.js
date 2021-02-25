@@ -1,15 +1,15 @@
-const app = require('express').Router();
-const db = require('../db/db.json');
 const fs = require('fs');
-// const { json } = require('express');
+const db = require('../db/db.json');
+const app = require('express').Router();
 
-app.get("/notes", (req, res) => {
+
+app.get("/api/notes", (req, res) => {
     let db = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));
     res.json(db);
 });
 
 
-app.post("/notes", (req, res) => {
+app.post("/api/notes", (req, res) => {
     let noteObject = {
         title: req.body.title,
         text: req.body.text,
@@ -24,9 +24,6 @@ app.post("/notes", (req, res) => {
     })
     res.json(db);
 })
-
-
-
 
 
 
