@@ -2,8 +2,8 @@
 
 const express = require('express');
 // const path = require('path');
-const apiroutes = require("./Develop/routes/apiroutes.js");
-const htmlroutes = require('./Develop/routes/htmlroutes.js');
+const apiroutes = require("./routes/apiroutes.js");
+const htmlroutes = require('./routes/htmlroutes.js');
 // Sets up the Express App
 
 const app = express();
